@@ -10,15 +10,31 @@
 .contact {
 	@include mix.displayFlex(flex, center, center);
 	color: var.$lightColor;
+	background: #EBEBEB url('../../assets/images/bg-contact.png') center center / cover no-repeat;
 
 	@media (any-hover: hover) {
 		background-attachment: fixed;
 	}
 
 	&__wrapper {
-		@include mix.displayFlex(flex, center, center);
+		@include mix.displayFlex(flex, center, stretch);
 		margin: 0 -1em;
 		flex-wrap: unset;
+	}
+
+	&__contact-block {
+		flex: 0 1 50%;
+		@include mix.displayFlex(flex, center, center);
+		flex-direction: column;
+		margin: 0 auto;
+		padding: 0 1em;
+		background: var.$accentColor;
+	}
+
+	&__form-block {
+		flex: 0 1 50%;
+		color: var.$darkColor;
+		background: #FFF;
 	}
 
 	&__title {
@@ -26,13 +42,12 @@
 		color: var.$lightColor;
 	}
 
-	&__contact-block {
-		@include mix.displayFlex(flex, center, center);
-		flex-direction: column;
-		width: 100%;
-		max-width: 500px;
-		margin: 0 auto;
-		padding: 0 1em;
+	&__title_cont {
+		color: var.$lightColor;
+	}
+
+	&__title_form {
+		color: var.$darkColor;
 	}
 
 	&__contact-description {

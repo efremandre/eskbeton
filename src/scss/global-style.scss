@@ -96,10 +96,11 @@ a:focus {
 	text-transform: var.$titleTransform;
 }
 
-.red {
-	color: var.$accentColor;
-}
-
-.green {
-	color: var.$accentColorTwo;
+.accent-title {
+	display: inline-block;
+	padding: 2px;
+	color: var.$lightColor;
+	font-weight: 400;
+	text-shadow: none;
+	background: var.$accentColor;
 }

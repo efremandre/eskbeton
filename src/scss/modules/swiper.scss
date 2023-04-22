@@ -4,24 +4,67 @@
 @use '../modules/button-dawn';
 
 .swiper {
-  max-width: 1200px;
-  padding: 20px 20px;
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  @include mix.displayFlex(flex, center, center);
+}
+
+.swiper-slide1 {
+  background: url('../../assets/images/hero/slide1.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide2 {
+  background: url('../../assets/images/hero/slide2.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide3 {
+  background: url('../../assets/images/hero/slide3.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide4{
+  background: url('../../assets/images/hero/slide4.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide5{
+  background: url('../../assets/images/hero/slide5.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide6{
+  background: url('../../assets/images/hero/slide6.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide7{
+  background: url('../../assets/images/hero/slide7.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide8{
+  background: url('../../assets/images/hero/slide8.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide9{
+  background: url('../../assets/images/hero/slide9.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide10{
+  background: url('../../assets/images/hero/slide10.jpg') center center / cover no-repeat;
+}
+
+.swiper-slide11{
+  background: url('../../assets/images/hero/slide11.jpg') center center / cover no-repeat;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  font-size: 26px;
+  font-size: 46px;
   color: var.$lightColor;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background: var.$accentColorTwo;
+  z-index: 4;
   transition: .8s opacity ease, .4s transform ease;
 
   @media (any-hover: hover) {
@@ -36,18 +79,11 @@
 }
 
 .swiper-button-next {
-  right: 6%;
+  right: 3%;
 }
 
 .swiper-button-prev {
-  left: 6%;
-}
-
-.swiper-pagination {
-
-  &>span {
-    background: var.$accentColorTwo;
-  }
+  left: 3%;
 }
 
 .swiper-pagination-bullet {
@@ -56,5 +92,11 @@
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: -20px;
+  bottom: 50px;
+}
+
+.swiper-pagination-bullets span {
+  width: 15px;
+  height: 15px;
+  background: #FFF;
 }

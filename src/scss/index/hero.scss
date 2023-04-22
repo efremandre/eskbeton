@@ -8,13 +8,24 @@
 }
 
 .hero {
+	position: relative;
 	@include mix.displayFlex(flex, start, center);
 	height: 100%;
 	min-height: 100vh;
-	background: #000;
+	background: #ccc;
 
 	@media (any-hover: hover) {
 		background-attachment: fixed;
+	}
+
+	&__row {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100vh;
+		@include mix.displayFlex(flex, center, center);
 	}
 
 	&__wrapper {
@@ -26,19 +37,19 @@
 		text-align: left;
 		letter-spacing: 0.02em;
 	}
-	
-	&__slide1 {
-		background: url('../../assets/images/hero/bg-hero.jpg') top center / cover no-repeat;
-	}
 
 	&__main-title {
+		text-shadow: 0 4px 10px rgba(0, 0, 0, .6);
 		margin-bottom: 0.3em;
 	}
 
 	&__subtitle {
-		@include mix.adaptivFont(20, var.$generalBigTextSizeMin);
+		@include mix.adaptivFont(var.$subTitleFontSize, var.$subTitleFontSizeMin);
 		margin-bottom: 1em;
-		color: #FFFFFF;
+		color: var.$lightColor;
+		font-weight: 600;
+		text-shadow: 0 4px 10px rgba(0, 0, 0, .6);
+		line-height: var.$titleHeight;
 	}
 
 	&__buttons {

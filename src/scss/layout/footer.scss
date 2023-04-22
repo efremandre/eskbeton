@@ -9,6 +9,7 @@
   line-height: 1.3em;
   color: var.$lightColor;
   background-color: var.$darkColor;
+
   & p {
     margin: 0;
   }
@@ -25,6 +26,7 @@
     &>p>a {
       display: inline-block;
       margin-top: 4px;
+      color: var.$lightColor;
       text-decoration: underline;
       &:hover {
         text-decoration: none;
@@ -42,6 +44,7 @@
     margin-top: 1em;
     &>a {
       position: relative;
+      color: var.$lightColor;
       &:before {
         content: '(´･ᴗ･ `)';
         position: absolute;

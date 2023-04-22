@@ -4,6 +4,9 @@
 
 .logo {
 	@include mix.displayFlex(flex, center, center);
+	@include mix.adaptivFont(28, 18);
+	font-family: Mont, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 600;
 	transition: .6s transform ease;
 
 	@media (any-hover: hover) {

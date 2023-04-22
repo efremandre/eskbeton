@@ -3,6 +3,7 @@
 @use '../base/extentsions';
 
 $sizeAfterEl: 1.1em;
+
 .navigation {
   position: fixed;
   z-index: 3;
@@ -10,9 +11,9 @@ $sizeAfterEl: 1.1em;
   box-sizing: border-box;
   top: 0;
   left: 0;
-  padding: .5em 0;
+  padding: 0;
   color: var.$darkColor;
-  background: rgba(255, 255, 255, 0.9);
+  background: #FFF;
   box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.5);
   transition: transform .8s ease;
 
@@ -20,35 +21,59 @@ $sizeAfterEl: 1.1em;
     transform: translateY(-150%);
   }
 
-  &__zero-block {
-    flex: 0 1 220px;
+  &__topbar {
+    position: relative;
+    background: var.$accentColor;
+    &:before {
+      @extend %pseudoElement;
+      bottom: 0;
+      left: -16px;
+      width: 25%;
+      height: 20px;
+      transform: skew(60deg, 0deg);
+      background: #FFF;
+    }
   }
 
   &__wrapper {
-    @include mix.displayFlex(flex, space-between, center);
+    @include mix.displayFlex(flex, space-between, stretch);
     box-sizing: border-box;
   }
 
   &__logo {
     flex: 0 1 auto;
+    position: relative;
+    top: -6px;
   }
 
-  &__block {
-    flex: 0 1 auto;
+  &__topbar-wrapper {
     @include mix.displayFlex(flex, flex-end, center);
     gap: 20px;
+  }
+
+  &__contactinfo {
+    flex: 0 1 50%;
+    @include mix.displayFlex(flex, space-around, center);
   }
 
   &__phone {
     @include mix.displayFlex(flex, flex-end, flex-end);
     flex-direction: column;
-    padding: 1em 0;
+  }
+
+  &__mail {
+    @include mix.displayFlex(flex, flex-end, flex-end);
+    flex-direction: column;
+  }
+
+  &__social {
+    padding: .6em 0;
   }
 }
 
 .nav {
   flex: 1 1 auto;
-  @include mix.displayFlex(flex, center, center);
+  @include mix.displayFlex(flex, flex-end, center);
   &__list {
     @include mix.displayFlex(flex, center, center);
   }
@@ -69,10 +94,10 @@ $sizeAfterEl: 1.1em;
     &:before {
       @extend %pseudoElement;
       bottom: 15px;
-      left: 18px;
+      left: 16px;
       width: 0;
       height: 2px;
-      background: var.$lightColor;
+      background: var.$accentColorTwo;
       transition: width .5s ease-in-out, color .5s ease-in-out;
     }
 
@@ -85,14 +110,25 @@ $sizeAfterEl: 1.1em;
       }
     }
   }
+
+  &__list-social {
+    gap: 30px;
+  }
+
+  &__social-icon {
+    width: 30px;
+    height: 30px;
+  }
 }
 
-.phone {
+.phone,
+.mail {
   &__link {
     position: relative;
     padding-left: 1.5em;
+    color: var.$lightColor;
     font-weight: 400;
-    @include mix.adaptivFont(18, var.$generalTextSizeMin);
+    @include mix.adaptivFont(16, 12);
 
     &:after {
       @extend %pseudoElement;
@@ -100,14 +136,29 @@ $sizeAfterEl: 1.1em;
       left: 0;
       width: $sizeAfterEl;
       height: $sizeAfterEl;
-      background: url('../../assets/images/icon/phone.svg') center center / contain no-repeat;
-      animation: callAnimation 1s ease-in-out infinite;
     }
 
     @media (any-hover: hover) {
         &:hover {
           text-decoration: underline;
         }
+    }
+  }
+}
+
+.phone {
+  &__link {
+    &:after {
+      background: url('../../assets/images/icon/phone.svg') center center / contain no-repeat;
+      animation: callAnimation 1s ease-in-out infinite;
+    }
+  }
+ }
+
+.mail {
+  &__link {
+    &:after {
+      background: url('../../assets/images/icon/mail.svg') center center / contain no-repeat;
     }
   }
 }

@@ -5,8 +5,8 @@ $phone = $_POST['tel'];
 $phone = str_replace(['(',')','-','+',' '], '', $phone );
 $message = $_POST['message'];
 $message = str_replace(['(',')','{','}','[', ']', '+', '=', '$', '_', '<', '>', '/', '/\/'], '', $message );
-$token = "6166107767:AAE5qAMrakvDzhV5v58AdrnieOyTJf1R5Ew";
-$chat_id = "-924787032";
+$token = "";
+$chat_id = "";
 $arr = array(
     'Имя пользователя: ' => $name,
     'Телефон: ' => $phone,

@@ -2,7 +2,7 @@
 export function scrollHeader() {
 	let lastScroll = 0;
 	const header = document.querySelector('[data-header]');
-	const hero = document.querySelector('.fullscreen');
+	const hero = document.querySelector('.hero');
 
 	if (header && hero) {
 		const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;

@@ -10,18 +10,16 @@
   @include mix.adaptivFont(var.$generalTextSize, var.$generalTextSizeMin);
   color: var.$lightColor;
   line-height: var.$generalLineHeight;
-  font-weight: 400;
-  background: var.$accentColorTwo;
-  border-radius: 8px;
-  transition: opacity .5s ease;
+  font-weight: 600;
+  background: inherit;
+  border: 2px solid var.$lightColor;
+  border-radius: var.$borderRadius;
+  transition: border-color .5s ease, background-color .6s ease;
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      opacity: .7;
+      border-color: var.$accentColorTwo;
+      background-color: var.$accentColorTwo;
     }
   }
-}
-
-.button_accent {
-  background-color: var.$accentColorTwo;
 }
