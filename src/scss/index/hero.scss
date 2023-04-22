@@ -1,0 +1,72 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use '../modules/button-dawn';
+
+.main__hero {
+	position: relative;
+}
+
+.hero {
+	@include mix.displayFlex(flex, start, center);
+	height: 100%;
+	min-height: 100vh;
+	background: #000;
+
+	@media (any-hover: hover) {
+		background-attachment: fixed;
+	}
+
+	&__wrapper {
+		@include mix.displayFlex(flex, center, start);
+		flex-direction: column;
+		position: relative;
+		width: 100%;
+		padding-bottom: 1em;
+		text-align: left;
+		letter-spacing: 0.02em;
+	}
+	
+	&__slide1 {
+		background: url('../../assets/images/hero/bg-hero.jpg') top center / cover no-repeat;
+	}
+
+	&__main-title {
+		margin-bottom: 0.3em;
+	}
+
+	&__subtitle {
+		@include mix.adaptivFont(20, var.$generalBigTextSizeMin);
+		margin-bottom: 1em;
+		color: #FFFFFF;
+	}
+
+	&__buttons {
+		@include mix.displayFlex(flex, start, center);
+		width: 100%;
+	}
+
+	&__button {
+		box-sizing: border-box;
+	}
+
+	@media (any-hover: none) {
+		&__button_order-call {
+			display: none;
+		}
+
+		&__button_call {
+			display: flex;
+		}
+	}
+
+	@media (any-hover: hover) {
+		&__button_order-call {
+			display: flex;
+		}
+
+		&__button_call {
+			display: none;
+		}
+	}
+}

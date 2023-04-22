@@ -1,0 +1,12 @@
+@use '../base/variable' as var;
+@use 'hero';
+@use 'feature-company';
+@use 'about-us';
+@use 'services';
+@use 'feature-services';
+@use 'contact';
+@use '../modules/modal-img';
+
+.main {
+	flex: 1 1 auto;
+}

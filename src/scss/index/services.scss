@@ -1,0 +1,17 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+@use '../modules/button-dawn';
+
+.main__services {
+	padding: 3em 0;
+}
+
+.services {
+	color: var.$lightColor;
+	background: var.$accentColor url('../../assets/images/sevices/bg-services.png') center center / cover no-repeat;
+
+	&__title {
+		color: var.$lightColor;
+	}
+}
