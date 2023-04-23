@@ -1527,18 +1527,38 @@ a:focus {
   max-width: 270px;
   padding: 1em;
   font-size: calc(14px + 2 * ((100vw - 320px) / 1200));
-  color: #FFF;
+  color: #111111;
   line-height: 1.5em;
   font-weight: 600;
-  background: inherit;
-  border: 2px solid #FFF;
+  background: #84BD3C;
+  border: 2px solid #84BD3C;
   border-radius: 4px;
-  transition: border-color 0.5s ease, background-color 0.6s ease;
+  transition: border-color 0.5s ease, background-color 0.6s ease, color 0.6s ease;
 }
 @media (hover: hover) and (pointer: fine) {
   .button:hover {
+    color: #FFF;
+    border-color: #84BD3C;
+    background-color: inherit;
+  }
+}
+
+.button-hero {
+  color: #FFF;
+  border: 2px solid #FFF;
+  background: inherit;
+  transition: border-color 0.5s ease, background-color 0.6s ease;
+}
+@media (any-hover: hover) {
+  .button-hero:hover {
     border-color: #84BD3C;
     background-color: #84BD3C;
+  }
+}
+
+@media (any-hover: hover) {
+  .button-form:hover {
+    color: #111111;
   }
 }
 

@@ -8,18 +8,41 @@
   max-width: 270px;
   padding: 1em;
   @include mix.adaptivFont(var.$generalTextSize, var.$generalTextSizeMin);
-  color: var.$lightColor;
+  color: var.$darkColor;
   line-height: var.$generalLineHeight;
   font-weight: 600;
-  background: inherit;
-  border: 2px solid var.$lightColor;
+  background: var.$accentColorTwo;
+  border: 2px solid var.$accentColorTwo;
   border-radius: var.$borderRadius;
-  transition: border-color .5s ease, background-color .6s ease;
+  transition: border-color .5s ease, background-color .6s ease, color .6s ease;
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
+      color: var.$lightColor;
       border-color: var.$accentColorTwo;
-      background-color: var.$accentColorTwo;
+      background-color: inherit;
+    }
+  }
+}
+
+.button-hero {
+  color: var.$lightColor;
+  border: 2px solid var.$lightColor;
+  background: inherit;
+  transition: border-color .5s ease, background-color .6s ease;
+
+  @media (any-hover: hover) {
+      &:hover {
+        border-color: var.$accentColorTwo;
+        background-color: var.$accentColorTwo;
+      }
+  }
+}
+
+.button-form {
+  @media (any-hover: hover) {
+    &:hover {
+      color: var.$darkColor;
     }
   }
 }
