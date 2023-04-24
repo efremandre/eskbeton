@@ -2007,6 +2007,7 @@ a:focus {
   height: 100%;
   margin: 0 auto;
   flex-wrap: unset;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .contact__contact-block, .contact__form-block {
   flex: 0 1 50%;
@@ -2025,9 +2026,12 @@ a:focus {
   width: 100%;
 }
 .contact__contact-body {
+  max-width: 200px;
+}
+.contact__contact-body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
 }
 .contact__title {
@@ -2037,6 +2041,7 @@ a:focus {
   color: #FFF;
 }
 .contact__title_cont {
+  margin-bottom: 1.5em;
   color: #FFF;
 }
 .contact__title_form {
@@ -2053,11 +2058,13 @@ a:focus {
 }
 .contact__phone, .contact__mail {
   margin-bottom: 1.5em;
-  font-size: calc(12px + 6 * ((100vw - 320px) / 1200));
+}
+.contact__phone > a, .contact__mail > a {
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1200));
 }
 .contact__social {
   width: 100%;
-  max-width: 200px;
+  max-width: 100px;
 }
 .contact__social_list {
   display: flex;
@@ -2373,6 +2380,9 @@ a:focus {
   }
   .navigation__phone {
     display: none;
+  }
+  .contact {
+    background: none;
   }
   .contact__wrapper {
     flex-direction: column;

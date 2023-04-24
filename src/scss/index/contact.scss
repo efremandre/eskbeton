@@ -20,6 +20,7 @@
 		height: 100%;
 		margin: 0 auto;
 		flex-wrap: unset;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 	}
 
 	&__contact-block,
@@ -28,10 +29,6 @@
 		@include mix.displayFlex(flex, center, center);
 		padding: 3em 1em;
 		background: var.$accentColor;
-	}
-
-	&__contact-block {
-
 	}
 
 	&__form-block {
@@ -46,7 +43,11 @@
 	}
 
 	&__contact-body {
-		@include mix.displayFlex(flex, center, center);
+		max-width: 200px;
+	}
+
+	&__contact-body {
+		@include mix.displayFlex(flex, center, start);
 		flex-direction: column;
 	}
 
@@ -58,6 +59,7 @@
 	}
 
 	&__title_cont {
+		margin-bottom: 1.5em;
 		color: var.$lightColor;
 	}
 
@@ -79,12 +81,15 @@
 	&__phone,
 	&__mail {
 		margin-bottom: 1.5em;
-		@include mix.adaptivFont(18, 12);
+
+		&>a {
+			@include mix.adaptivFont(18, 14);
+		}
 	}
 
 	&__social {
 		width: 100%;
-		max-width: 200px;
+		max-width: 100px;
 	}
 
 	&__social_list {
