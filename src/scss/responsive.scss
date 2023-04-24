@@ -135,14 +135,9 @@
 		}
 	}
 
-	.fullscreen {
-		&__feature-body {
-			display: none;
-		}
-
-		&__buttons {
-			width: 100%;
-			gap: 15px;
+	.contact {
+		&__wrapper {
+			flex-direction: column;
 		}
 	}
 

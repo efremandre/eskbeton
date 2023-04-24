@@ -2374,12 +2374,8 @@ a:focus {
   .navigation__phone {
     display: none;
   }
-  .fullscreen__feature-body {
-    display: none;
-  }
-  .fullscreen__buttons {
-    width: 100%;
-    gap: 15px;
+  .contact__wrapper {
+    flex-direction: column;
   }
   .footer__logo {
     display: block;
