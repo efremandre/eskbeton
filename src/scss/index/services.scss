@@ -3,15 +3,38 @@
 @use '../base/extentsions';
 @use '../modules/button-dawn';
 
-.main__services {
-	padding: 3em 0;
-}
-
 .services {
 	color: var.$lightColor;
 	background: var.$accentColor url('../../assets/images/sevices/bg-services.png') center center / cover no-repeat;
 
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-gap: 50px 70px;
+	}
+
+	&__button {
+		max-width: 100%;
+	}
+
 	&__title {
+		margin-bottom: 1em;
+		text-align: left;
 		color: var.$lightColor;
+	}
+}
+
+.card {
+	@include mix.displayFlex(flex, center, center);
+	flex-direction: column;
+	padding: 1em;
+	border: 1px solid #FFF;
+
+	&__btn {
+		border: none;
+	}
+
+	&__image {
+		@include mix.displayFlex(flex, center, center);
 	}
 }

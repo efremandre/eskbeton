@@ -162,8 +162,16 @@
                 </div>
             </section>
             <div id="aboutUs" class="main__feature-company feature-company">
-                <div class="container">
-
+                <div class="feature-company__wrapper">
+                    <div class="feature-company__feature feature-company__feature_experience">
+                        <p class="animation" title="Более 10 лет опыта">Более 10 лет опыта</p>
+                    </div>
+                    <div class="feature-company__feature feature-company__feature_treaty">
+                        <p class="animation" title="Работа по договору">Работа по договору</p>
+                    </div>
+                    <div class="feature-company__feature feature-company__feature_guarantee">
+                        <p class="animation" title="Гарантия на работу">Гарантия на работу</p>
+                    </div>
                 </div>
             </div>
             <section class="main__about-us about-us">
@@ -186,7 +194,7 @@
                     </div>
                 </div>
             </section>
-            <section class="main__services services">
+            <section id="services" class="main__services services">
                 <div class="container">
                     <h2 class="services__title subtitle animation">Наши услуги</h2>
                     <div class="services__wrapper-card">
@@ -241,10 +249,8 @@
                                         dignissim odio. Pellentesque gravida libero id lacus vestibulum commodo.</p>
                                 </div>
                             </div>
-                            <div class="services__card card">
-                                <div class="hero__buttons">
-                                    <a title="Написать магазину ЕСК-Бетон в WhatsApp" href="https://wa.me/79000000000" class="hero__button button">Заказать услуги</a>
-                                </div>
+                            <div class="services__card card card__btn">
+                                <a title="Написать магазину ЕСК-Бетон в WhatsApp" href="https://wa.me/79000000000" class="services__button button">Расчитать стоимость</a>
                             </div>
                         </div>
                     </div>
@@ -256,9 +262,9 @@
                 </div>
             </div>
             <section id="contact" class="main__contact contact">
-                <div class="container">
-                    <div class="contact__wrapper">
-                        <div class="contact__contact-block">
+                <div class="contact__wrapper">
+                    <div class="contact__contact-block">
+                        <div class="contact__contact-body">
                             <h2 class="contact__title contact__title_cont subtitle">Контакты</h2>
                             <div class="contact__contactinfo">
                                 <div class="contact__phone phone">
@@ -269,29 +275,31 @@
                                 </div>
                             </div>
                             <div class="contact__social social">
-                                <ul class="social__list">
+                                <ul class="social__list contact__social_list">
                                     <li>
-                                        <a class="social__item" href="tel:+79180000000">
-                                            <img class="social__icon" src="./assets/images/icon/wa.svg" alt="WhatsApp" title="WhatsApp">
-                                            <span class="social__label">Написать WhatsApp</span>
+                                        <a class="social__item contact__social_item" href="tel:+79180000000">
+                                            <img class="social__icon contact__social_icon" src="./assets/images/icon/wa.svg" alt="WhatsApp" title="WhatsApp">
+                                            <span class="social__label contact__social_label">Написать WhatsApp</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="social__item" href="https://t.me/efremandre">
-                                            <img class="social__icon" src="./assets/images/icon/tg.svg" alt="Instagram" title="ВидеоСтраж Telegram">
-                                            <span class="social__label">Написать в Telegram</span>
+                                        <a class="social__item contact__social_item" href="https://t.me/efremandre">
+                                            <img class="social__icon contact__social_icon" src="./assets/images/icon/tg.svg" alt="Instagram" title="Telegram">
+                                            <span class="social__label contact__social_label">Написать в Telegram</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="social__item" href="https://instagram.com/website_building_krd?igshid=YjNmNGQ3MDY=">
-                                            <img class="social__icon" src="./assets/images/icon/insta-form.svg" alt="WhatsApp" title="ВидеоСтраж Instagram">
-                                            <span class="social__label">Посетить Instagram</span>
+                                        <a class="social__item contact__social_item" href="https://instagram.com/website_building_krd?igshid=YjNmNGQ3MDY=">
+                                            <img class="social__icon contact__social_icon" src="./assets/images/icon/insta-form.svg" alt="WhatsApp" title="Instagram">
+                                            <span class="social__label contact__social_label">Посетить Instagram</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="contact__form-block">
+                    </div>
+                    <div class="contact__form-block">
+                        <div class="contact__form-body">
                             <h2 class="contact__title contact__title_form subtitle">Получите больше информации</h2>
                             <p class="contact__contact-description">Заполните данные и получите консультацию от наших специалистов</p>
                             <div class="contact__form-container form-container">
