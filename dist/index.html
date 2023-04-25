@@ -62,9 +62,6 @@
                                             <img class="social__icon" src="./assets/images/icon/wa.svg" alt="WhatsApp" title="WhatsApp">
                                         </a></li>
                                     <li><a href="https://wa.me/79999999999" class="social__link">
-                                            <img class="social__icon" src="./assets/images/icon/insta-form.svg" alt="Instagram" title="Instagram">
-                                        </a></li>
-                                    <li><a href="https://wa.me/79999999999" class="social__link">
                                             <img class="social__icon" src="./assets/images/icon/tg.svg" alt="Telegram" title="Telegram">
                                         </a></li>
                                 </ul>
@@ -116,7 +113,7 @@
                                 <h1 class="hero__main-title main-title">ЕСК-<span class="accent-title">Бетон</span></h1>
                                 <p class="hero__subtitle">Промышленные полы<br>Затирка пола<br>Топпинговые полы</p>
                                 <div class="hero__buttons buttons-animation">
-                                    <a title="Написать ЕСК-Бетон в WhatsApp" href="https://wa.me/79000000000" class="hero__button button">Написать нам</a>
+                                    <a title="Написать ЕСК-Бетон в WhatsApp" href="https://wa.me/79000000000" class="hero__button button button-hero">Написать нам</a>
                                 </div>
                             </div>
                         </div>
@@ -162,8 +159,16 @@
                 </div>
             </section>
             <div id="aboutUs" class="main__feature-company feature-company">
-                <div class="container">
-
+                <div class="feature-company__wrapper">
+                    <div class="feature-company__feature feature-company__feature_experience">
+                        <p class="animation" title="Более 10 лет опыта">Более 10 лет опыта</p>
+                    </div>
+                    <div class="feature-company__feature feature-company__feature_treaty">
+                        <p class="animation" title="Работа по договору">Работа по договору</p>
+                    </div>
+                    <div class="feature-company__feature feature-company__feature_guarantee">
+                        <p class="animation" title="Гарантия на работу">Гарантия на работу</p>
+                    </div>
                 </div>
             </div>
             <section class="main__about-us about-us">
@@ -186,10 +191,10 @@
                     </div>
                 </div>
             </section>
-            <section class="main__services services">
+            <section id="services" class="main__services services">
                 <div class="container">
                     <h2 class="services__title subtitle animation">Наши услуги</h2>
-                    <div class="services__wrapper-card">
+                    <div class="services__wrapper-card animation">
                         <div class="services__grid">
                             <div class="services__card card">
                                 <div class="card__title-wrapper">
@@ -241,49 +246,85 @@
                                         dignissim odio. Pellentesque gravida libero id lacus vestibulum commodo.</p>
                                 </div>
                             </div>
-                            <div class="services__card card">
-                                <div class="hero__buttons">
-                                    <a title="Написать магазину ЕСК-Бетон в WhatsApp" href="https://wa.me/79000000000" class="hero__button button">Заказать услуги</a>
-                                </div>
+                            <div class="services__card card card__btn card__btn_desctop">
+                                <a title="Написать магазину ЕСК-Бетон в WhatsApp" href="https://wa.me/79000000000" class="services__button button">Расчитать стоимость</a>
                             </div>
                         </div>
+                    </div>
+                    <div class="services__card card card__btn card__btn_mobile">
+                        <a title="Написать магазину ЕСК-Бетон в WhatsApp" href="https://wa.me/79000000000" class="services__button button">Расчитать стоимость</a>
                     </div>
                 </div>
             </section>
             <div class="main__feature-services feature-services">
                 <div class="container">
-
+                    <div class="feature-services__wrapper">
+                        <div class="feature-services__feature animationLeft">
+                            <div class="feature-services__title-wrapper">
+                                <div class="feature-services__image-wrapper"><img src="./assets/images/sevices/strong.svg" alt="Износостойкость" title="Износостойкость"></div>
+                                <p class="feature-services__title">Износостойкость</p>
+                            </div>
+                            <div class="feature-services__description-wrapper">
+                                <p> Бетон идеален для использования в промышленных помещениях,
+                                    бетонные полы выдерживают большие нагрузки и не деформируются со временем</p>
+                            </div>
+                        </div>
+                        <div class="feature-services__feature feature-services__feature_border animation">
+                            <div class="feature-services__title-wrapper">
+                                <div class="feature-services__image-wrapper"><img src="./assets/images/sevices/infint.svg" alt="Долговечность" title="Долговечность"></div>
+                                <p class="feature-services__title">Долговечность</p>
+                            </div>
+                            <div class="feature-services__description-wrapper">
+                                <p> Бетонные полы очень прочны и могут выдерживать тяжелую технику, пешеходное движение и даже
+                                    экстремальные температуры</p>
+                            </div>
+                        </div>
+                        <div class="feature-services__feature animationRight">
+                            <div class="feature-services__title-wrapper">
+                                <div class="feature-services__image-wrapper"><img src="./assets/images/sevices/eco.svg" alt="Экологичность" title="Экологичность"></div>
+                                <p class="feature-services__title">Экологичность</p>
+                            </div>
+                            <div class="feature-services__description-wrapper">
+                                <p> Бетонные полы безвредны для окружающей среды, так как не содержат вредных химических веществ и
+                                    часто изготавливаются из местных материалов</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <section id="contact" class="main__contact contact">
-                <div class="container">
-                    <div class="contact__wrapper">
-                        <div class="contact__contact-block">
+                <div class="contact__wrapper">
+                    <div class="contact__contact-block">
+                        <div class="contact__contact-body animationLeft">
                             <h2 class="contact__title contact__title_cont subtitle">Контакты</h2>
+                            <div class="contact__contactinfo">
+                                <div class="contact__phone phone">
+                                    <a href="tel:+79999999999" class="phone__link" title="Телефон">+7(000) 000-00-00</a>
+                                </div>
+                                <div class="contact__mail mail">
+                                    <a href="mailto:mail@mail.com" class="mail__link" title="Электронная почта">mail@mail.com</a>
+                                </div>
+                            </div>
                             <div class="contact__social social">
-                                <ul class="social__list">
+                                <ul class="social__list contact__social_list">
                                     <li>
-                                        <a class="social__item" href="tel:+79180000000">
-                                            <img class="social__icon" src="./assets/images/icon/phone-form.svg" alt="WhatsApp" title="ВидеоСтраж телефон">
-                                            <span class="social__label">Позвонить +7(918) 000 00 00</span>
+                                        <a class="social__item contact__social_item" href="tel:+79180000000">
+                                            <img class="social__icon contact__social_icon" src="./assets/images/icon/wa.svg" alt="WhatsApp" title="WhatsApp">
+                                            <span class="social__label contact__social_label">Написать WhatsApp</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="social__item" href="https://t.me/efremandre">
-                                            <img class="social__icon" src="./assets/images/icon/tg.svg" alt="Instagram" title="ВидеоСтраж Telegram">
-                                            <span class="social__label">Написать в Telegram</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="social__item" href="https://instagram.com/website_building_krd?igshid=YjNmNGQ3MDY=">
-                                            <img class="social__icon" src="./assets/images/icon/insta-form.svg" alt="WhatsApp" title="ВидеоСтраж Instagram">
-                                            <span class="social__label">Посетить Instagram</span>
+                                        <a class="social__item contact__social_item" href="https://t.me/efremandre">
+                                            <img class="social__icon contact__social_icon" src="./assets/images/icon/tg.svg" alt="Instagram" title="Telegram">
+                                            <span class="social__label contact__social_label">Написать в Telegram</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="contact__form-block">
+                    </div>
+                    <div class="contact__form-block">
+                        <div class="contact__form-body animationRight">
                             <h2 class="contact__title contact__title_form subtitle">Получите больше информации</h2>
                             <p class="contact__contact-description">Заполните данные и получите консультацию от наших специалистов</p>
                             <div class="contact__form-container form-container">
@@ -295,7 +336,7 @@
                                     <div class="form__input">
                                         <input id="tel" type="tel" name="tel" placeholder="Ваш телефон" required data-phone-pattern>
                                     </div>
-                                    <button class="contact__button button button_accent">Заказать звонок</button>
+                                    <button class="contact__button button button-form">Заказать звонок</button>
                                     <div class="form__check">
                                         <p>Нажимая кнопку вы подтверждаете что ознакомились с<br><a title="Политика конфиденциальности" target="_blank" href="/privacy.html">политикой конфиденциальности</a></p>
                                     </div>

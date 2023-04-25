@@ -1206,24 +1206,24 @@ a:focus {
 .form__input {
   position: relative;
 }
-.form__input > input, .form__input > textarea {
+.form__input > input {
   width: 100%;
   margin-bottom: 1em;
   padding: 1em;
   box-sizing: border-box;
   color: #111111;
   outline: none;
-  border-radius: 8px;
   border: none;
+  border-bottom: 1px solid #111111;
   background: #FFF;
   transition: box-shadow 0.3s ease;
 }
-.form__input > input:-webkit-autofill, .form__input > input:-webkit-autofill:hover, .form__input > input:-webkit-autofill:focus, .form__input > input:-webkit-autofill:active, .form__input > textarea:-webkit-autofill, .form__input > textarea:-webkit-autofill:hover, .form__input > textarea:-webkit-autofill:focus, .form__input > textarea:-webkit-autofill:active {
+.form__input > input:-webkit-autofill, .form__input > input:-webkit-autofill:hover, .form__input > input:-webkit-autofill:focus, .form__input > input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #111111 inset !important;
   -webkit-text-fill-color: #111111 !important;
   -webkit-backdrop-filter: unset;
 }
-.form__input > input:focus, .form__input > textarea:focus {
+.form__input > input:focus {
   box-shadow: 0 10px 8px -4px rgba(154, 154, 154, 0.3);
 }
 .form__input > textarea {
@@ -1527,18 +1527,38 @@ a:focus {
   max-width: 270px;
   padding: 1em;
   font-size: calc(14px + 2 * ((100vw - 320px) / 1200));
-  color: #FFF;
+  color: #111111;
   line-height: 1.5em;
   font-weight: 600;
-  background: inherit;
-  border: 2px solid #FFF;
+  background: #84BD3C;
+  border: 2px solid #84BD3C;
   border-radius: 4px;
-  transition: border-color 0.5s ease, background-color 0.6s ease;
+  transition: border-color 0.5s ease, background-color 0.6s ease, color 0.6s ease;
 }
 @media (hover: hover) and (pointer: fine) {
   .button:hover {
+    color: #FFF;
+    border-color: #84BD3C;
+    background-color: inherit;
+  }
+}
+
+.button-hero {
+  color: #FFF;
+  border: 2px solid #FFF;
+  background: inherit;
+  transition: border-color 0.5s ease, background-color 0.6s ease;
+}
+@media (any-hover: hover) {
+  .button-hero:hover {
     border-color: #84BD3C;
     background-color: #84BD3C;
+  }
+}
+
+@media (any-hover: hover) {
+  .button-form:hover {
+    color: #111111;
   }
 }
 
@@ -1863,8 +1883,37 @@ a:focus {
   }
 }
 
-.main__about-us {
-  padding: 3em 0;
+.feature-company {
+  font-weight: 700;
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1200));
+  line-height: 1.3em;
+  color: #FB931D;
+}
+.feature-company__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 220px;
+}
+.feature-company__feature {
+  flex: 0 1 33.333%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feature-company__feature > p {
+  text-align: center;
+}
+.feature-company__feature_experience {
+  color: #FFF;
+  background: #84BD3C url("../assets/images/about-us/bg-expirience.jpg") center center/cover no-repeat;
+}
+.feature-company__feature_treaty {
+  background: #09283D;
+}
+.feature-company__feature_guarantee {
+  background: #1A1A1A url("../assets/images/about-us/bg-guarantee.jpg") center center/cover no-repeat;
 }
 
 .about-us__row {
@@ -1898,27 +1947,87 @@ a:focus {
 .about-us__image-wrapper > img {
   height: 100%;
   margin: 0 auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.main__services {
-  padding: 3em 0;
+  object-fit: contain;
 }
 
 .services {
   color: #FFF;
   background: #09283D url("../assets/images/sevices/bg-services.png") center center/cover no-repeat;
 }
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 50px 70px;
+}
+.services__button {
+  max-width: 100%;
+}
 .services__title {
+  margin-bottom: 1em;
+  text-align: left;
   color: #FFF;
 }
 
-.main__contact {
-  padding: 3em 0;
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  border: 1px solid #FFF;
+}
+.card__btn {
+  border: none;
+}
+.card__btn_mobile {
+  display: none;
+}
+.card__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-services {
+  padding: 1.5em 0;
+}
+.feature-services__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feature-services__feature {
+  flex: 0 1 33.333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em 1em;
+  text-align: center;
+}
+.feature-services__feature_border {
+  border-right: 1px solid #111111;
+  border-left: 1px solid #111111;
+}
+.feature-services__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  height: 80px;
+}
+.feature-services__title {
+  font-size: calc(18px + 6 * ((100vw - 320px) / 1200));
+  line-height: 1.3em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.feature-services__description-wrapper {
+  padding: 0 1em;
 }
 
 .contact {
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1934,51 +2043,86 @@ a:focus {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  margin: 0 -1em;
+  width: 100%;
+  max-width: 980px;
+  height: 100%;
+  margin: 0 auto;
   flex-wrap: unset;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.contact__contact-block {
+.contact__contact-block, .contact__form-block {
   flex: 0 1 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 0 1em;
+  padding: 3em 1em;
   background: #09283D;
 }
 .contact__form-block {
-  flex: 0 1 50%;
   color: #111111;
   background: #FFF;
 }
+.contact__contact-body, .contact__form-body {
+  max-width: 360px;
+  width: 100%;
+}
+.contact__contact-body {
+  max-width: 200px;
+}
+.contact__contact-body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
 .contact__title {
-  margin-bottom: 1.3em;
+  font-weight: 400;
+  margin-bottom: 0.8em;
+  line-height: 1em;
   color: #FFF;
 }
 .contact__title_cont {
+  margin-bottom: 1.5em;
   color: #FFF;
 }
 .contact__title_form {
+  text-align: left;
   color: #111111;
 }
 .contact__contact-description {
-  margin-bottom: 15px;
-  text-align: center;
+  margin-bottom: 2em;
+  text-align: left;
+  line-height: 1.2em;
+}
+.contact__contactinfo {
+  margin-bottom: 1em;
+}
+.contact__phone, .contact__mail {
+  margin-bottom: 1.5em;
+}
+.contact__phone > a, .contact__mail > a {
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1200));
 }
 .contact__social {
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100px;
 }
-.contact__list {
+.contact__social_list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 10px;
+}
+.contact__social_icon {
+  width: 36px;
+  height: 36px;
 }
 .contact__form-container {
   width: 100%;
 }
 .contact__button {
   max-width: 100%;
+  margin-top: 2em;
 }
 
 .modal {
@@ -2030,6 +2174,9 @@ a:focus {
 
 .main {
   flex: 1 1 auto;
+}
+.main__about-us, .main__services, .main__contact {
+  padding: 3em 0;
 }
 
 .footer {
@@ -2267,6 +2414,22 @@ a:focus {
     grid-template-columns: repeat(6, 300px);
     grid-template-rows: repeat(1, 1fr);
   }
+  .services__card_desctop {
+    display: none;
+  }
+  .services__card_mobile {
+    display: block;
+    max-width: 360px;
+    margin-top: 1em;
+  }
+  .card__btn_desctop {
+    display: none;
+  }
+  .card__btn_mobile {
+    display: flex;
+    max-width: 360px;
+    margin: 1em auto 0 auto;
+  }
 }
 @media screen and (max-width: 569.98px) {
   .container {
@@ -2275,12 +2438,17 @@ a:focus {
   .navigation__phone {
     display: none;
   }
-  .fullscreen__feature-body {
-    display: none;
+  .feature-services__wrapper {
+    flex-direction: column;
   }
-  .fullscreen__buttons {
-    width: 100%;
-    gap: 15px;
+  .feature-services__feature_border {
+    border: none;
+  }
+  .contact {
+    background: none;
+  }
+  .contact__wrapper {
+    flex-direction: column;
   }
   .footer__logo {
     display: block;
@@ -2288,6 +2456,9 @@ a:focus {
   }
 }
 @media screen and (max-width: 429.98px) {
+  .feature-company__wrapper {
+    flex-direction: column;
+  }
   .footer__wrapper {
     display: block;
   }

@@ -75,16 +75,15 @@
 
   &__input {
     position: relative;
-    &>input,
-    &>textarea {
+    &>input {
       width: 100%;
       margin-bottom: 1em;
       padding: 1em;
       box-sizing: border-box;
       color: var.$darkColor;
       outline: none;
-      border-radius: 8px;
       border: none;
+      border-bottom: 1px solid var.$darkColor;
       background: var.$lightColor;
       transition: box-shadow .3s ease;
 

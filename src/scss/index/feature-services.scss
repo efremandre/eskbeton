@@ -3,3 +3,40 @@
 @use '../base/extentsions';
 @use '../modules/button-dawn';
 
+.feature-services {
+  padding: 1.5em 0;
+
+  &__wrapper {
+    @include mix.displayFlex(flex, space-between, center);
+  }
+
+  &__feature {
+    flex: 0 1 33.333%;
+    @include mix.displayFlex(flex, center, center);
+    flex-direction: column;
+    padding: 2em 1em;
+    text-align: center;
+  }
+
+  &__feature_border {
+    border-right: 1px solid var.$darkColor;
+    border-left: 1px solid var.$darkColor;
+  }
+
+  &__image-wrapper {
+    @include mix.displayFlex(flex, center, center);
+    margin-bottom: 1em;
+    height: 80px;
+  }
+
+  &__title {
+    @include mix.adaptivFont(24, 18);
+    line-height: 1.3em;
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+
+  &__description-wrapper {
+    padding: 0 1em;
+  }
+}

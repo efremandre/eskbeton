@@ -9,4 +9,10 @@
 
 .main {
 	flex: 1 1 auto;
+
+	&__about-us,
+	&__services,
+	&__contact {
+		padding: 3em 0;
+	}
 }

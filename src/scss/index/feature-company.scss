@@ -2,3 +2,36 @@
 @use '../base/mixin' as mix;
 @use '../base/extentsions';
 @use '../modules/button-dawn';
+
+.feature-company {
+  font-weight: 700;
+  @include mix.adaptivFont(var.$generalBigTextSize, 14);
+  line-height: 1.3em;
+  color: #FB931D;
+  &__wrapper {
+    @include mix.displayFlex(flex, center, stretch);
+    height: 220px;
+  }
+
+  &__feature {
+    flex: 0 1 33.333%;
+    padding: 1em;
+    @include mix.displayFlex(flex, center, center);
+    &>p {
+      text-align: center;
+    }
+  }
+
+  &__feature_experience {
+    color: var.$lightColor;
+    background: var.$accentColorTwo url('../../assets/images/about-us/bg-expirience.jpg') center center / cover no-repeat;
+  }
+
+  &__feature_treaty {
+    background: var.$accentColor;
+  }
+
+  &__feature_guarantee {
+    background: #1A1A1A url('../../assets/images/about-us/bg-guarantee.jpg') center center / cover no-repeat;
+  }
+}

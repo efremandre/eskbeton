@@ -3,11 +3,8 @@
 @use '../base/extentsions';
 @use '../modules/button-dawn';
 
-.main__contact {
-	padding: 3em 0;
-}
-
 .contact {
+	min-height: 80vh;
 	@include mix.displayFlex(flex, center, center);
 	color: var.$lightColor;
 	background: #EBEBEB url('../../assets/images/bg-contact.png') center center / cover no-repeat;
@@ -18,49 +15,91 @@
 
 	&__wrapper {
 		@include mix.displayFlex(flex, center, stretch);
-		margin: 0 -1em;
+		width: 100%;
+		max-width: 980px;
+		height: 100%;
+		margin: 0 auto;
 		flex-wrap: unset;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 	}
 
-	&__contact-block {
+	&__contact-block,
+	&__form-block {
 		flex: 0 1 50%;
 		@include mix.displayFlex(flex, center, center);
-		flex-direction: column;
-		margin: 0 auto;
-		padding: 0 1em;
+		padding: 3em 1em;
 		background: var.$accentColor;
 	}
 
 	&__form-block {
-		flex: 0 1 50%;
 		color: var.$darkColor;
 		background: #FFF;
 	}
 
+	&__contact-body,
+	&__form-body {
+		max-width: 360px;
+		width: 100%;
+	}
+
+	&__contact-body {
+		max-width: 200px;
+	}
+
+	&__contact-body {
+		@include mix.displayFlex(flex, center, start);
+		flex-direction: column;
+	}
+
 	&__title {
-		margin-bottom: 1.3em;
+		font-weight: 400;
+		margin-bottom: .8em;
+		line-height: 1em;
 		color: var.$lightColor;
 	}
 
 	&__title_cont {
+		margin-bottom: 1.5em;
 		color: var.$lightColor;
 	}
 
 	&__title_form {
+		text-align: left;
 		color: var.$darkColor;
 	}
 
 	&__contact-description {
-		margin-bottom: 15px;
-		text-align: center;
+		margin-bottom: 2em;
+		text-align: left;
+		line-height: 1.2em;
+	}
+
+	&__contactinfo {
+		margin-bottom: 1em;
+	}
+
+	&__phone,
+	&__mail {
+		margin-bottom: 1.5em;
+
+		&>a {
+			@include mix.adaptivFont(18, 14);
+		}
 	}
 
 	&__social {
-		margin-bottom: 20px;
+		width: 100%;
+		max-width: 100px;
 	}
 
-	&__list {
-		@include mix.displayFlex(flex, center, center);
+	&__social_list {
+		@include mix.displayFlex(flex, space-between, center);
+		gap: 10px;
+	}
+
+	&__social_icon {
+		width: 36px;
+		height: 36px;
 	}
 
 	&__form-container {
@@ -69,5 +108,6 @@
 
 	&__button {
 		max-width: 100%;
+		margin-top: 2em;
 	}
 }

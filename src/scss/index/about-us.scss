@@ -3,10 +3,6 @@
 @use '../base/extentsions';
 @use '../modules/button-dawn';
 
-.main__about-us {
-  padding: 3em 0;
-}
-
 .about-us {
   &__row {
     @include mix.displayFlex(flex, start, start);
@@ -41,8 +37,7 @@
     &>img {
       height: 100%;
       margin: 0 auto;
-      object-fit: cover;
-      border-radius: 8px;
+      object-fit: contain;
     }
   }
 
