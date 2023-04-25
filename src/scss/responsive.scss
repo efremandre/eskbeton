@@ -135,6 +135,16 @@
 		}
 	}
 
+	.feature-services {
+		&__wrapper {
+			flex-direction: column;
+		}
+
+		&__feature_border {
+			border: none;
+		}
+	}
+
 	.contact {
 		background: none;
 		&__wrapper {
