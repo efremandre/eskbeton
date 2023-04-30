@@ -47,16 +47,15 @@ export function sendForm() {
 			}
 		})
 	})
-
 	const eventCalllback = function (e) {
 		const el = e.target;
-			const clearVal = el.dataset.phoneClear;
-			const pattern = el.dataset.phonePattern;
-			const matrix_def = "+7(___) ___-__-__";
-			const matrix = pattern ? pattern : matrix_def;
-			let i = 0;
-			const def = matrix.replace(/\D/g, "");
-			let val = e.target.value.replace(/\D/g, "");
+		const clearVal = el.dataset.phoneClear;
+		const pattern = el.dataset.phonePattern;
+		const matrix_def = "+7(___) ___-__-__";
+		const matrix = pattern ? pattern : matrix_def;
+		let i = 0;
+		const def = matrix.replace(/\D/g, "");
+		let val = e.target.value.replace(/\D/g, "");
 		if (clearVal !== 'false' && e.type === 'blur') {
 			if (val.length < matrix.match(/([\_\d])/g).length) {
 				e.target.value = '';
@@ -68,8 +67,8 @@ export function sendForm() {
 			return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
 		});
 	}
-	const phone_inputs = document.querySelectorAll('[data-phone-pattern]');
-	for (let elem of phone_inputs) {
+	const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
+	for (let elem of phoneInputs) {
 		for (let ev of ['input', 'blur', 'focus']) {
 			elem.addEventListener(ev, eventCalllback);
 		}

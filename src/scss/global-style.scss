@@ -81,6 +81,7 @@ a:focus {
 	max-width: #{var.$widthContainer + px};
 	margin: 0 auto;
 	padding: 0 1.3em;
+	overflow: hidden;
 }
 
 .main-section {

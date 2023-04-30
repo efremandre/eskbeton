@@ -1,73 +1,31 @@
 @use '../base/variable' as var;
 @use '../base/extentsions';
 
-.buttons-animation {
-  opacity: 0;
-  transform: translateY(10px);
-  &.element-show {
-    opacity: 1;
-    transition: transform 3s ease, opacity 3s ease;
-    transform: translateY(0%);
-  }
-}
+[data-aos="svg-animation"] {
+    stroke: var.$accentColor;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
 
-.animation {
-  opacity: 0;
-  transform: translateY(40px);
-  &.element-show {
-    opacity: 1;
-    transition: transform 1s ease, opacity 1s ease;
-    transform: translateY(0%);
+    &.aos-animate {
+      animation: infint 3s ease 1s forwards;
+    }
   }
-}
 
-.animationTitle {
-  opacity: 0;
-  transform: translateY(40px);
-  &.element-show {
-    opacity: 1;
-    transition: transform 2s ease, opacity 1s ease;
-    transform: translateY(0%);
+
+@keyframes infint {
+  0% {
+    fill: transparent;
   }
-}
 
-.animationTop{
-  opacity: 0;
-  transform: translateY(-100px);
-  &.element-show {
-    opacity: 1;
-    transition: transform 2s ease, opacity 1s ease;
-    transform: translateY(0%);
+  80% {
+    stroke-dashoffset: 0;
+    fill: transparent;
   }
-}
 
-.animationLeft {
-  opacity: 0;
-  transform: translateX(-40px);
-  &.element-show {
-    opacity: 1;
-    transition: transform 1s ease, opacity 1s ease;
-    transform: translateX(0%);
-  }
-}
-
-.animationRight {
-  opacity: 0;
-  transform: translateX(40px);
-  &.element-show {
-    opacity: 1;
-    transition: transform 1s ease, opacity 1s ease;
-    transform: translateX(0%);
-  }
-}
-
-.bcard-animation {
-  opacity: 0;
-  transform: scale(0);
-  &.element-show {
-    opacity: 1;
-    transition: transform 1s ease, opacity 1s ease;
-    transform: scale(1);
+  100% {
+    stroke-dashoffset: 0;
+    fill: var.$accentColorTwo;
+    stroke: var.$accentColorTwo;
   }
 }
 
