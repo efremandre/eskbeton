@@ -3100,6 +3100,11 @@ a:focus {
   padding: 3em 0;
 }
 
+section {
+  position: sticky;
+  top: 0;
+}
+
 .footer {
   padding: 2em 0;
   font-size: calc(8px + 6 * ((100vw - 320px) / 1200));
