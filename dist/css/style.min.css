@@ -2896,6 +2896,9 @@ a:focus {
   padding: 1em;
   border: 1px solid #FFF;
 }
+.card__title-wrapper {
+  text-align: center;
+}
 .card__btn {
   border: none;
 }
@@ -3126,18 +3129,21 @@ section {
   text-align: left;
   flex: 0 1 50%;
 }
-.footer__requisites > p > a {
+.footer__requisites > p {
+  margin-top: 4px;
+}
+.footer__copyright {
+  flex: 0 1 auto;
+  padding: 0 1em;
+}
+.footer__copyright > p > a {
   display: inline-block;
   margin-top: 4px;
   color: #FFF;
   text-decoration: underline;
 }
-.footer__requisites > p > a:hover {
+.footer__copyright > p > a:hover {
   text-decoration: none;
-}
-.footer__copyright {
-  flex: 0 1 auto;
-  padding: 0 1em;
 }
 .footer__author {
   margin-top: 1em;
