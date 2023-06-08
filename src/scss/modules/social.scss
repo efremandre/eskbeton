@@ -10,27 +10,19 @@
   }
 
   &__item {
-    @media (any-hover: hover) {
-      &:hover {
-        .social__label {
-          visibility: visible;
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-    }
+    display: block;
   }
 
   &__icon {
     width: 1.6em;
     height: 1.6em;
     transition: opacity .3s ease;
-
     @media (any-hover: hover) {
       &:hover {
         opacity: .7;
       }
     }
+
   }
 
   &__label {
