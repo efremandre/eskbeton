@@ -2277,40 +2277,19 @@ a:focus {
   align-items: center;
 }
 
+.image-wrapper > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .swiper-slide1 {
   background: url("../assets/images/hero/slide1.jpg") center center/cover no-repeat;
 }
 
-.swiper-slide2 {
-  background: url("../assets/images/hero/slide2.jpg") center center/cover no-repeat;
-}
-
-.swiper-slide3 {
-  background: url("../assets/images/hero/slide3.jpg") center center/cover no-repeat;
-}
-
-.swiper-slide4 {
-  background: url("../assets/images/hero/slide4.jpg") center center/cover no-repeat;
-}
-
 .swiper-slide5 {
   background: url("../assets/images/hero/slide5.jpg") center center/cover no-repeat;
-}
-
-.swiper-slide6 {
-  background: url("../assets/images/hero/slide6.jpg") center center/cover no-repeat;
-}
-
-.swiper-slide7 {
-  background: url("../assets/images/hero/slide7.jpg") center center/cover no-repeat;
-}
-
-.swiper-slide8 {
-  background: url("../assets/images/hero/slide8.jpg") center center/cover no-repeat;
-}
-
-.swiper-slide9 {
-  background: url("../assets/images/hero/slide9.jpg") center center/cover no-repeat;
 }
 
 .swiper-slide10 {
@@ -2319,6 +2298,14 @@ a:focus {
 
 .swiper-slide11 {
   background: url("../assets/images/hero/slide11.jpg") center center/cover no-repeat;
+}
+
+.swiper-slide12 {
+  background: url("../assets/images/hero/slide12.jpg") center center/cover no-repeat;
+}
+
+.swiper-slide13 {
+  background: url("../assets/images/hero/slide13.jpg") center center/cover no-repeat;
 }
 
 .swiper-button-next:after,
